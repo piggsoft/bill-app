@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <script>
+        if (window.location.href.indexOf("index.html") == -1) {
+            var _href = window.location.href;
+            var _middle = "/";
+            if (_href.lastIndexOf("/") == _href.length - 1) {
+                _middle = "";
+            }
+            window.location.href = window.location.href + _middle + "index.html"
+        }
+    </script>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="resources/css/bootstrap.min.css">
+
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="resources/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="resources/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="resources/css/app.css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="resources/js/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="resources/js/bootstrap.min.js"></script>
+    <script src="resources/js/app.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+      $(function() {
+        $("a").on("click", function() {
+            var _index = $(this).parent().index();
+            var _url = "";
+            switch (_index) {
+              case 0:
+                _url = "data/addDailyBill.html";
+                break;
+              case 1:
+                _url = "charts/dayDetail.html";
+                break;
+              default:
+                break;
+            }
+            if (_url != "") {
+              window.location.href = _url;
+            }
+        });
+      });
+    </script>
+</head>
+<body>
+<div class="container content">
+  <div class="row">
+    <div class="col-xs-6 col-md-3">
+      <a href="javascript:;" class="thumbnail">
+        <span class="glyphicon glyphicon-plus-sign font-icon color-green"></span>
+        <span class="glyphicon-class">添加新支出</span>
+      </a>
+    </div>
+    <div class="col-xs-6 col-md-3">
+      <a href="javascript:;" class="thumbnail">
+        <span class="fa fa-bar-chart font-icon color-green"></span>
+        <span class="glyphicon-class">查看每日支出图标</span>
+      </a>
+    </div>
+    <!-- <div class="col-xs-6 col-md-3">
+      <a href="#" class="thumbnail">
+        <span class="glyphicon glyphicon-plus-sign font-icon color-add"></span>
+        <span class="glyphicon-class">添加新支出</span>
+      </a>
+    </div>
+    <div class="col-xs-6 col-md-3">
+      <a href="#" class="thumbnail">
+        <span class="glyphicon glyphicon-plus-sign font-icon color-add"></span>
+        <span class="glyphicon-class">添加新支出</span>
+      </a>
+    </div> -->
+  </div>
+</div>
+</body>
+</html>

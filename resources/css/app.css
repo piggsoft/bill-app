@@ -1,0 +1,28 @@
+.content {
+    margin-top: 120px;
+}
+
+.content-min {
+    margin-top: 80px;
+}
+
+.font-icon {
+    margin: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 100px;
+}
+
+.color-green {
+  color: rgba(8, 157, 76, 0.96);
+}
+
+.glyphicon-class {
+    display: block;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+a.thumbnail {
+      text-align: center;
+}
